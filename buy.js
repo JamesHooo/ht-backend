@@ -39,9 +39,31 @@ function buy(){
 
 }
 
+function buy2(){
+	var querystring = require('querystring');
+	var options = {
+		host: 'haitao2-frontend',
+		path: '/',
+		method: 'GET',
+		headers: {
+			'Content-Type': 'text/html'
+		}
+	};
+	var req = http.request(options,function(res){
+		res.setEncoding('utf8');
+		res.on('data',function(data){
+			return data;
+		});
+	});
+	
+	return "OK";
+
+}
+
 var handleRequest = function(request, response) {
 	var ip = getIPAdress();
-	var res=buy();
+	//var res=buy();
+	var res = buy2();
 	response.writeHead(200);                                                                                       
 	response.end("<p>buy "+ res + " on <br/>"+ip);  
 } 
