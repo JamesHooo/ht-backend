@@ -18,7 +18,7 @@ function getIPAdress(){
 function buy(){
 	var mysql = require('mysql');
 	var conn = mysql.createConnection({
-		host: '10.166.224.197',
+		host: '59.111.123.208',
 		user: 'op',
 		password: '123456',
 		database:'product',
